@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home';
@@ -10,27 +10,26 @@ import MyPage from './pages/Mypage';
 import NotFound from './pages/NotFound';
 
 function App() {
-    return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/profiles/:username" element={<Profile />} />
-                <Route path="/mypage" element={<MyPage />} />
-            </Route>
-            <Route path="/articles" element={<Articles />}>
-                <Route path=":id" element={<Article />} />
-            </Route>
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profiles/:username" element={<Profile />} />
+        <Route path="/mypage" element={<MyPage />} />
+      </Route>
+      <Route path="/articles" element={<Articles />}>
+        <Route path=":id" element={<Article />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 };
-=======
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
-// ÀÔ·Â ¶óº§À» ³ªÅ¸³»´Â ÇÔ¼ö
+// ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
 function Label(props) {
   return (
     <label style={{ margin: '30px' }}>
@@ -40,7 +39,7 @@ function Label(props) {
   );
 }
 
-// ÀÔ·Â ¶óº§°ú ÀÔ·Â ÇÊµå¸¦ Æ÷ÇÔÇÏ´Â ÇÔ¼ö
+// ï¿½Ô·ï¿½ ï¿½óº§°ï¿½ ï¿½Ô·ï¿½ ï¿½Êµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
 function InputLabel(props,) {
   return (
     <Label labelText={props.labelText}>
@@ -53,16 +52,16 @@ function InputLabel(props,) {
   );
 }
 
-// ¸ÞÀÎ ÇÔ¼ö
+// ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
 function App() {
-  //name, email, message »ý¼º ¹× ºó ¹®ÀÚ¿­·Î  ÃÊ±âÈ­
+  //name, email, message ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½  ï¿½Ê±ï¿½È­
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  //Á¤º¸¸¦ Á¦ÃâÇßÀ» ¶§ È£ÃâµÇ´Â ÇÔ¼ö
+  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½? ï¿½Ô¼ï¿½
   function handleSubmit(event) {
-    event.preventDefault(); // Æû Á¦Ãâ ÀÌº¥Æ®¸¦ Ãë¼ÒÇÏ°í console.log()¸¦ È£ÃâÇÏµµ·Ï ÇÕ´Ï´Ù.
+    event.preventDefault(); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½? console.log()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
     console.log('Submitted:', name, email, message);
     alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
   }
@@ -71,7 +70,7 @@ function App() {
   return (
     <div>
       <form onSubmit={handleSubmit} className="form-container">
-        {/* InputLabel ÄÄÆ÷³ÍÆ®¸¦ »ç¿ëÇÏ¿© ÀÔ·Â ÇÊµå¿Í ¶óº§À» ±×·ìÈ­ */}
+        {/* InputLabel ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½? ï¿½Ô·ï¿½ ï¿½Êµï¿½ï¿½? ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½È­ */}
         <InputLabel labelText="Name:" type="text" value={name} onChange={(event) => setName(event.target.value)} />
         <InputLabel labelText="Email:" type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
         <InputLabel labelText="Message:" value={message} onChange={(event) => setMessage(event.target.value)} />
@@ -80,6 +79,6 @@ function App() {
     </div>
   );
 }
->>>>>>> ca6978adca18d5cacf83eaf53625fcc0015dd7d0
+// >>>>>>> ca6978adca18d5cacf83eaf53625fcc0015dd7d0
 
 export default App;
