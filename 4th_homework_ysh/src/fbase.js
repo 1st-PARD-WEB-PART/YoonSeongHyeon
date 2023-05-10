@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from 'firebase/auth'; // Auth 연결
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -10,6 +11,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app); // 유저 정보 관리
 
-export default app;
+export const authService = getAuth(app);
  
