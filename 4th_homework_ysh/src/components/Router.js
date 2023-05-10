@@ -11,8 +11,7 @@ const AppRouter = ({ isLoggedIn }) => {
                     //   <Route path="/" element={<Home />} />
                     <Route path="/" element={<span>Home</span>} />
                 ) : (
-                    //   <Route path="/" element={<Auth />} />
-                    <Route path="/" element={<span>Auth</span>} />
+                      <Route path="/" element={<Auth />} />
                 )}
             </Routes>
         </Router>
